@@ -3,7 +3,7 @@ MAINTAINER lyndon <snakeliwei@gmail.com>
 
 RUN set -ex \
 	&& apk add --no-cache \
-		make
+		make \
 		bash \
 		gcc \
 		musl-dev \
