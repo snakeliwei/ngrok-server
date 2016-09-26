@@ -31,4 +31,4 @@ Environment Variables
     DOMAIN          domain name that ngrok running on
     TUNNEL_ADDR     address that ngrok server's control channel listens to, ":4443" by default
     HTTP_ADDR       address that ngrok server's http tunnel listents to, ":80 by default"
-    HTTPS_ADDR      address that ngrok server's https tunnel listents to, ":80 by default"
+    HTTPS_ADDR      address that ngrok server's https tunnel listents to, ":443 by default"
