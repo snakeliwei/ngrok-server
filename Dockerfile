@@ -1,9 +1,16 @@
-FROM ubuntu:trusty
-MAINTAINER Feng Honglin <tifayuki@gmail.com>
+FROM alpine:edge
+MAINTAINER lyndon <snakeliwei@gmail.com>
 
-RUN apt-get update && \
-    apt-get install -y build-essential golang git mercurial && \
-    mkdir -p /release
+RUN set -ex \
+	&& apk add --no-cache --virtual .build-deps \
+		bash \
+		gcc \
+		musl-dev \
+		openssl \
+		go \
+        git \
+        mercurial \
+    && mkdir -p /release
 
 RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
 
