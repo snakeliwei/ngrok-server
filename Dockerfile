@@ -2,7 +2,8 @@ FROM alpine:edge
 MAINTAINER lyndon <snakeliwei@gmail.com>
 
 RUN set -ex \
-	&& apk add --no-cache --virtual .build-deps \
+	&& apk add --no-cache \
+		make
 		bash \
 		gcc \
 		musl-dev \
