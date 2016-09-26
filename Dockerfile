@@ -8,9 +8,9 @@ RUN set -ex \
 		musl-dev \
 		openssl \
 		go \
-        git \
-        mercurial \
-    && mkdir -p /release
+		git \
+		mercurial \
+       && mkdir -p /release
 
 RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
 
