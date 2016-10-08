@@ -3,6 +3,7 @@ MAINTAINER lyndon <snakeliwei@gmail.com>
 
 RUN set -ex \
 	&& apk add --no-cache \
+		linux-headers \
 		ca-certificates \
 		make \
 		bash \
