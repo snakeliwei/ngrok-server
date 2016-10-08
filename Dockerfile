@@ -15,7 +15,8 @@ RUN set -ex \
 		mercurial \
        && mkdir -p /release
 
-RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
+RUN git config http.postBuffer 24288000 \
+    && git clone https://github.com/tutumcloud/ngrok.git /ngrok
 
 ADD *.sh /
 
