@@ -1,22 +1,11 @@
-FROM alpine:edge
+FROM ubuntu:trusty
 MAINTAINER lyndon <snakeliwei@gmail.com>
 
-RUN set -ex \
-	&& apk add --no-cache \
-		linux-headers \
-		ca-certificates \
-		make \
-		bash \
-		gcc \
-		musl-dev \
-		openssl \
-		go \
-		git \
-		mercurial \
-       && mkdir -p /release
+RUN apt-get update && \
+    apt-get install -y build-essential golang git mercurial && \
+    mkdir -p /release
 
-RUN git config http.postBuffer 24288000 \
-    && git clone https://github.com/tutumcloud/ngrok.git /ngrok
+RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
 
 ADD *.sh /
 
