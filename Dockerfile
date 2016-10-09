@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install -y build-essential golang git mercurial && \
     mkdir -p /release
 
-RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
+RUN git clone https://github.com/inconshreveable/ngrok.git /ngrok
 
 COPY . /
 
