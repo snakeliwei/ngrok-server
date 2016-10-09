@@ -9,6 +9,10 @@ RUN git clone https://github.com/inconshreveable/ngrok.git /ngrok
 
 COPY . /
 
+ENV GOOS ""
+ENV GOARCH "" 
+ENV DOMAIN **None**
+
 VOLUME ["/ngrok/bin"]
 
 CMD ["/build.sh"]
