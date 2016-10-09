@@ -1,12 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ "${DOMAIN}" ]; then
-    echo "Please specify DOMAIN"
-    exit 1
-fi
-
-if [ "${DOMAIN}" ]; then
+if [ "${DOMAIN}" == "**None**" ]; then
     echo "Please specify DOMAIN"
     exit 1
 fi
