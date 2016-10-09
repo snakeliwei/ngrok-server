@@ -14,5 +14,4 @@ ENV GOARCH ""
 ENV DOMAIN **None**
 
 VOLUME ["/ngrok/bin"]
-
 CMD ["/build.sh"]
