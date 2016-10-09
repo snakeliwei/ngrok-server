@@ -7,7 +7,7 @@ RUN apt-get update && \
 
 RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
 
-ADD *.sh /
+COPY *.sh /
 
 ENV TLS_KEY **None**
 ENV TLS_CERT **None**
